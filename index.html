@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WikiClone</title>
   <!-- Styles -->
+  <link rel="stylesheet" href="./styles/wiki.css">
+  <link rel="stylesheet" href="./styles/tablet.css" media="screen and (min-width:480px)">
+  <link rel="stylesheet" href="./styles/desktop.css" media="screen and (min-width:768px)">
+  <!-- Favicon -->
   <link rel="shortcut icon" href="./static/wikipedia.ico" type="image/x-icon">
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +20,12 @@
   <header class="headerLogo">
     <img class="headerLogo__img" src="./static/logo/wikipedia-logo.png" alt="Imagen del logo de Wikipedia">
     <h1 style="display: none;">Wikipedia</h1>
-    <img src="./static/logo/wikipedia-logo-txt.png" alt="Imagen de la palabra Wikipedia">
-    <strong>
-      La enciclopedia libre
-    </strong>
+    <div class="headerLogo__text">
+      <img class="headerLogo__imgTxt" src="./static/logo/wikipedia-logo-txt.png" alt="Imagen de la palabra Wikipedia">
+      <strong>
+        La enciclopedia libre
+      </strong>
+    </div>
   </header>
   <main>
     <article class="search">
@@ -27,7 +33,9 @@
         <label for="inputText" style="display: none;">Búsqueda</label>
         <input class="search__container__input" type="text" id="inputText">
         <p class="search__container__lenguage">ES <span>></span></p>
-        <input class="search__container__btn" type="submit" value="🔍">
+        <button class="search__container__btn">
+          <img src="./static/svgs/9035548_search_outline_icon.svg" alt="Icono de buscar">
+        </button>
       </form>
     </article>
     <section class="articles">
@@ -43,7 +51,7 @@
         <li class="articles__list__item"><a href="#">فارسی</a><small>959 000+</small><span>مقاله</span></li>
         <li class="articles__list__item"><a href="#">Português</a><small>1 101 000+</small><span>artigos</span></li>
       </ul>
-      <button>
+      <button class="articles__btn">
         <img src="./static/svgs/WikiIdiomas-logo.png" alt="Logo de idiomas">
         <strong>Leer Wikipedia en tu idioma</strong>
         <span>></span>
@@ -57,43 +65,111 @@
       </div>
       <article class="links">
         <ul class="links__list">
-          <li class="links__list__item"><img src="./static/svgs/Commons-logo.svg" alt="Logo de la secçion de Commons"><a href="#">Commons</a><span>Fotos libremente utilizables y más</span></li>
-          <li class="links__list__item"><img src="./static/svgs/Wikivoyage-Logo-v3-icon.png" alt="Logo de la secçion de Wikiviajes"><a href="#">Wikiviajes</a><span>La guia de viajes libre</span></li>
-          <li class="links__list__item"><img src="./static/svgs/1024px-Wiktfavicon_en.png" alt="Logo de la secçion de Wikcionario"><a href="#">Wikcionario</a><span>El diccionario libre</span></li>
-          <li class="links__list__item"><img src="./static/svgs/Wikibooks-logo.png" alt="Logo de la secçion de Wikilibros"><a href="#">Wikilibros</a><span>Libros de contenido libre</span></li>
-          <li class="links__list__item"><img src="./static/svgs/Wikinews-logo.png" alt="Logo de la secçion de Wikinoticias"><a href="#">Wikinoticias</a><span>La fuente de noticias libres</span></li>
-          <li class="links__list__item"><img src="./static/svgs/1200px-Notification-icon-Wikidata-logo.png" alt="Logo de la secçion de Wikidata"><a href="#">Wikidata</a><span>Base de conocimiento libre</span></li>
-          <li class="links__list__item"><img src="./static/svgs/1200px-Wikiversity_logo_2017.png" alt="Logo de la secçion de Wikiversidad"><a href="#">Wikiversidad</a><span>Plataforma educativa libre</span></li>
-          <li class="links__list__item"><img src="./static/svgs/1200px-Notification-icon-Wikiquote.png" alt="Logo de la secçion de Wikiquote"><a href="#">Wikiquote</a><span>La colección de citas</span></li>
-          <li class="links__list__item"><img src="./static/svgs/1200px-Notification-icon-MediaWiki-logo.png" alt="Logo de la secçion de MediaWiki"><a href="#">MediaWiki</a><span>Aplicación Wiki libre y abierta</span></li>
-          <li class="links__list__item"><img src="./static/svgs/Wikisource-logo.png" alt="Logo de la secçion de Wikisource"><a href="#">Wikisource</a><span>La biblioteca libre</span></li>
-          <li class="links__list__item"><img src="./static/svgs/Wikispecies-logo.png" alt="Logo de la secçion de Wikispecies"><a href="#">Wikispecies</a><span>Directorio de especies libre</span></li>
-          <li class="links__list__item"><img src="./static/svgs/Meta-Wiki_Proposed_logo.png" alt="Logo de la secçion de Meta-Wiki"><a href="#">Meta-Wiki</a><span>Coordenación y documentación comunitaria</span></li>
+          <li class="links__list__item">
+            <img src="./static/svgs/Commons-logo.svg" alt="Logo de la secçion de Commons">
+            <div class="item--txt">
+              <a href="#">Commons</a>
+              <span>Fotos libremente utilizables y más</span>
+            </div>
+          </li>
+          <li class="links__list__item">
+            <img src="./static/svgs/Wikivoyage-Logo-v3-icon.png" alt="Logo de la secçion de Wikiviajes">
+            <div class="item--txt">
+              <a href="#">Wikiviajes</a>
+              <span>La guia de viajes libre</span>
+            </div>
+          </li>
+          <li class="links__list__item">
+            <img src="./static/svgs/1024px-Wiktfavicon_en.png" alt="Logo de la secçion de Wikcionario">
+            <div class="item--txt">
+              <a href="#">Wikcionario</a>
+              <span>El diccionario libre</span>
+            </div>
+          </li>
+          <li class="links__list__item">
+            <img src="./static/svgs/Wikibooks-logo.png" alt="Logo de la secçion de Wikilibros">
+            <div class="item--txt">
+              <a href="#">Wikilibros</a>
+              <span>Libros de contenido libre</span>
+            </div>
+          </li>
+          <li class="links__list__item">
+            <img src="./static/svgs/Wikinews-logo.png" alt="Logo de la secçion de Wikinoticias">
+            <div class="item--txt">
+              <a href="#">Wikinoticias</a>
+              <span>La fuente de noticias libres</span>
+            </div>
+          </li>
+          <li class="links__list__item">
+            <img src="./static/svgs/1200px-Notification-icon-Wikidata-logo.png" alt="Logo de la secçion de Wikidata">
+            <div class="item--txt">
+              <a href="#">Wikidata</a>
+              <span>Base de conocimiento libre</span>
+            </div>
+          </li>
+          <li class="links__list__item">
+            <img src="./static/svgs/1200px-Wikiversity_logo_2017.png" alt="Logo de la secçion de Wikiversidad">
+            <div class="item--txt">
+              <a href="#">Wikiversidad</a>
+              <span>Plataforma educativa libre</span>
+            </div>
+          </li>
+          <li class="links__list__item">
+            <img src="./static/svgs/1200px-Notification-icon-Wikiquote.png" alt="Logo de la secçion de Wikiquote">
+            <div class="item--txt">
+              <a href="#">Wikiquote</a>
+              <span>La colección de citas</span>
+            </div>
+          </li>
+          <li class="links__list__item">
+            <img src="./static/svgs/1200px-Notification-icon-MediaWiki-logo.png" alt="Logo de la secçion de MediaWiki">
+            <div class="item--txt">
+              <a href="#">MediaWiki</a>
+              <span>Aplicación Wiki libre y abierta</span>
+            </div>
+          </li>
+          <li class="links__list__item">
+            <img src="./static/svgs/Wikisource-logo.png" alt="Logo de la secçion de Wikisource">
+            <div class="item--txt">
+              <a href="#">Wikisource</a>
+              <span>La biblioteca libre</span>
+            </div>
+          </li>
+          <li class="links__list__item">
+            <img src="./static/svgs/Wikispecies-logo.png" alt="Logo de la secçion de Wikispecies">
+            <div class="item--txt">
+              <a href="#">Wikispecies</a>
+              <span>Directorio de especies libre</span>
+            </div>
+          </li>
+          <li class="links__list__item">
+            <img src="./static/svgs/Meta-Wiki_Proposed_logo.png" alt="Logo de la secçion de Meta-Wiki">
+            <div class="item--txt">
+              <a href="#">Meta-Wiki</a>
+              <span>Coordenación y documentación comunitaria</span>
+            </div>
+          </li>
         </ul>
       </article>
       <div class="info__download">
         <div class="info__download__title">
-          <img src="./static/favicon/wikipedia.ico" alt="Logo de Wikipedia">
+          <img src="./static/logo/wikipedia-logo-w.png" alt="Logo de Wikipedia">
           <strong>Descargar Wikipedia para Android o iOS</strong>
         </div>
         <p>Guarda tus artículos favoritos para leerlos sin conexión, sincroniza tus listas de lectura en varios dispositivos y personaliza tu experiencia de lectura con la aplicación oficial de Wikipedia.</p>
         <div class="info__download__plataforms">
           <a href="#">
-            <img src="./static/svgs/Google-Play-Logo-300x88.png" alt="Imagen de enlace a Google Play Store">
+            <img src="./static/svgs/Badge_Google_PlayStore_badges.png" alt="Imagen de enlace a Google Play Store">
           </a>
           <a href="#">
-            <img src="./static/svgs/Apple-Store-Logo-300x88.png" alt="Imagen de enlace a App Store">
+            <img src="./static/svgs/Badge_Apple_App_Store_badges.png" alt="Imagen de enlace a App Store">
           </a>
         </div>
       </div>
     </section>
   </main>
-  <footer>
-    <p> Esta página está disponible bajo la <a href="#">licencia Creative Commons Atribución-CompartirIgual</a>
-        <ul>
-          <li>Términos de uso</li>
-          <li>Normativa de privacidad</li>
-        </ul>
+  <footer class="foot">
+    <p> Esta página está disponible bajo la <a href="#">licencia Creative Commons Atribución-CompartirIgual</a> &#9679; <a href="#">Términos de uso</a> &#9679; <a href="#">Normativa de privacidad</a>
     </p>
   </footer>
 </body>

@@ -1,0 +1,17 @@
+.info{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "info list list"
+                         "down list list";
+}
+
+.info__about{
+    grid-area: info;
+}
+.links{
+    grid-area: list;
+}
+.info__download{
+    grid-area: down;
+}
