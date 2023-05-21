@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WikiClone</title>
+  <!-- Styles -->
+  <link rel="shortcut icon" href="./static/wikipedia.ico" type="image/x-icon">
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="headerLogo">
+    <img class="headerLogo__img" src="./static/logo/wikipedia-logo.png" alt="Imagen del logo de Wikipedia">
+    <h1 style="display: none;">Wikipedia</h1>
+    <img src="./static/logo/wikipedia-logo-txt.png" alt="Imagen de la palabra Wikipedia">
+    <strong>
+      La enciclopedia libre
+    </strong>
+  </header>
+  <main>
+    <article class="search">
+      <form class="search__container">
+        <label for="inputText" style="display: none;">Búsqueda</label>
+        <input class="search__container__input" type="text" id="inputText">
+        <p class="search__container__lenguage">ES <span>></span></p>
+        <input class="search__container__btn" type="submit" value="🔍">
+      </form>
+    </article>
+    <section class="articles">
+      <ul class="articles__list">
+        <li class="articles__list__item"><a href="#">Español</a><small>1 854 000+</small><span>artículos</span></li>
+        <li class="articles__list__item"><a href="#">English</a><small>6 644 000+</small><span>articles</span></li>
+        <li class="articles__list__item"><a href="#">Русский</a><small>1 909 000+</small><span>статей</span></li>
+        <li class="articles__list__item"><a href="#">日本語</a><small>1 370 000+</small><span>記事</span></li>
+        <li class="articles__list__item"><a href="#">Deutsch</a><small>2 792 000+</small><span>Artikel</span></li>
+        <li class="articles__list__item"><a href="#">Français</a><small>2 514 000+</small><span>articles</span></li>
+        <li class="articles__list__item"><a href="#">Italiano</a><small>1 806 000+</small><span>voci</span></li>
+        <li class="articles__list__item"><a href="#">中文</a><small>1 347 000+</small><span>条目 / 條目</span></li>
+        <li class="articles__list__item"><a href="#">فارسی</a><small>959 000+</small><span>مقاله</span></li>
+        <li class="articles__list__item"><a href="#">Português</a><small>1 101 000+</small><span>artigos</span></li>
+      </ul>
+      <button>
+        <img src="./static/svgs/WikiIdiomas-logo.png" alt="Logo de idiomas">
+        <strong>Leer Wikipedia en tu idioma</strong>
+        <span>></span>
+      </button>
+    </section>
+    <section class="info">
+      <div class="info__about">
+        <img src="./static/svgs/Wikiinfo-logo.png" alt="Logo de información">
+        <p>Wikipedia es alojada por la Fundación Wikimedia, una organización sin fines de lucro que también alberga una gama de otros proyectos.</p>
+        <a href="#">Puedes apoyar nuestro trabajo con una donación.</a>
+      </div>
+      <article class="links">
+        <ul class="links__list">
+          <li class="links__list__item"><img src="./static/svgs/Commons-logo.svg" alt="Logo de la secçion de Commons"><a href="#">Commons</a><span>Fotos libremente utilizables y más</span></li>
+          <li class="links__list__item"><img src="./static/svgs/Wikivoyage-Logo-v3-icon.png" alt="Logo de la secçion de Wikiviajes"><a href="#">Wikiviajes</a><span>La guia de viajes libre</span></li>
+          <li class="links__list__item"><img src="./static/svgs/1024px-Wiktfavicon_en.png" alt="Logo de la secçion de Wikcionario"><a href="#">Wikcionario</a><span>El diccionario libre</span></li>
+          <li class="links__list__item"><img src="./static/svgs/Wikibooks-logo.png" alt="Logo de la secçion de Wikilibros"><a href="#">Wikilibros</a><span>Libros de contenido libre</span></li>
+          <li class="links__list__item"><img src="./static/svgs/Wikinews-logo.png" alt="Logo de la secçion de Wikinoticias"><a href="#">Wikinoticias</a><span>La fuente de noticias libres</span></li>
+          <li class="links__list__item"><img src="./static/svgs/1200px-Notification-icon-Wikidata-logo.png" alt="Logo de la secçion de Wikidata"><a href="#">Wikidata</a><span>Base de conocimiento libre</span></li>
+          <li class="links__list__item"><img src="./static/svgs/1200px-Wikiversity_logo_2017.png" alt="Logo de la secçion de Wikiversidad"><a href="#">Wikiversidad</a><span>Plataforma educativa libre</span></li>
+          <li class="links__list__item"><img src="./static/svgs/1200px-Notification-icon-Wikiquote.png" alt="Logo de la secçion de Wikiquote"><a href="#">Wikiquote</a><span>La colección de citas</span></li>
+          <li class="links__list__item"><img src="./static/svgs/1200px-Notification-icon-MediaWiki-logo.png" alt="Logo de la secçion de MediaWiki"><a href="#">MediaWiki</a><span>Aplicación Wiki libre y abierta</span></li>
+          <li class="links__list__item"><img src="./static/svgs/Wikisource-logo.png" alt="Logo de la secçion de Wikisource"><a href="#">Wikisource</a><span>La biblioteca libre</span></li>
+          <li class="links__list__item"><img src="./static/svgs/Wikispecies-logo.png" alt="Logo de la secçion de Wikispecies"><a href="#">Wikispecies</a><span>Directorio de especies libre</span></li>
+          <li class="links__list__item"><img src="./static/svgs/Meta-Wiki_Proposed_logo.png" alt="Logo de la secçion de Meta-Wiki"><a href="#">Meta-Wiki</a><span>Coordenación y documentación comunitaria</span></li>
+        </ul>
+      </article>
+      <div class="info__download">
+        <div class="info__download__title">
+          <img src="./static/favicon/wikipedia.ico" alt="Logo de Wikipedia">
+          <strong>Descargar Wikipedia para Android o iOS</strong>
+        </div>
+        <p>Guarda tus artículos favoritos para leerlos sin conexión, sincroniza tus listas de lectura en varios dispositivos y personaliza tu experiencia de lectura con la aplicación oficial de Wikipedia.</p>
+        <div class="info__download__plataforms">
+          <a href="#">
+            <img src="./static/svgs/Google-Play-Logo-300x88.png" alt="Imagen de enlace a Google Play Store">
+          </a>
+          <a href="#">
+            <img src="./static/svgs/Apple-Store-Logo-300x88.png" alt="Imagen de enlace a App Store">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p> Esta página está disponible bajo la <a href="#">licencia Creative Commons Atribución-CompartirIgual</a>
+        <ul>
+          <li>Términos de uso</li>
+          <li>Normativa de privacidad</li>
+        </ul>
+    </p>
+  </footer>
+</body>
+</html>
