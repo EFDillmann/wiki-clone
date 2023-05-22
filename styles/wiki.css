@@ -51,6 +51,11 @@ body{
     font-weight: 400;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+}
+
 .search{
     padding: 0 .5rem;
 }
@@ -112,6 +117,8 @@ body{
     margin: .5rem 1rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .articles__list{
@@ -138,7 +145,12 @@ body{
 .articles__list__item:hover a{
     text-decoration: underline;
 }
-.articles__list__item span, .articles__list__item small{
+.articles__list__item div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.articles__list__item div span, .articles__list__item div small{
     color: var(--color-grey);
 }
 
